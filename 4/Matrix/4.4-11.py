@@ -1,12 +1,10 @@
 n = int(input())
-matrix = []
-total = 0
+l = [input().split() for _ in range(n)]
 counter = 0
-for i in range(n):
-    temp = [int(num) for num in input().split()]
-    matrix.append(temp)
-    sum_row= sum(matrix[i])/n
-    print(sum_row)
-    if float(matrix[i][i]) > sum_row:
-        counter = counter+1
+for i in l:
+    sr = (sum(list(map(int, i)))) / len(i)
+    for j in i:
+        if int(j) > sr:
+            counter += 1
     print(counter)
+    counter = 0
