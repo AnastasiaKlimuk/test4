@@ -1,6 +1,7 @@
-my_list = [[1, 9, 8, 7, 4], [7, 3, 4], [2, 1]]
-total = 0
+my_list = [[12, 221, 3], [41, 5, 633], [71, 8, 99]]
+
 for row in my_list:
-    for elem in row:
-        total += elem
-print(total)
+    maximum = max(row)
+    minimum = min(row)
+
+print(maximum + minimum)
